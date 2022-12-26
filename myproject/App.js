@@ -1,17 +1,30 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TextInput,Button } from 'react-native';
 
 export default function App() {
-  const [name, setName] = useState("Batuhan");
-  const [age, setAge] = useState("21");
+  const [name, setName] = useState("");
+  const [age, setAge] = useState("");
 
   return (
     <View style={styles.container}>
-      <Text>Enter Name : </Text>
-      <TextInput style={styles.input}/>
+      <Text>Enter Name : {name}</Text>
+      
 
-      <Text>name : {name}, age : {age}</Text>
+      <TextInput
+      
+      style={styles.input}
+      placeholder="enter your name "
+      onChangeText={(val)=> setName(val)}
+      />
+      <Text>Enter Age : {age}</Text>
+
+      <TextInput
+      keyboardType="numeric"
+      style={styles.input}
+      placeholder="enter your age"
+      onChangeText={(batu)=> setAge(batu)}/>  
     </View>
+    
   );
 }
 
@@ -27,7 +40,9 @@ const styles = StyleSheet.create({
     borderColor:"#777",
     padding:8,
     margin:10,
-    width:100,
+    width:150,
+    backgroundColor:"white",
+    color:"black",
   }
 
 });
