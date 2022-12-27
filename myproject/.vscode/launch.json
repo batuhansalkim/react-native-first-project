@@ -13,6 +13,22 @@
       "platform": "android"
     },
     {
+      "name": "Run Android",
+      "request": "launch",
+      "type": "reactnative",
+      "cwd": "${workspaceFolder}",
+      "enableDebug": false,
+      "platform": "android"
+    },
+    {
+      "name": "Run Android Hermes - Experimental",
+      "request": "launch",
+      "type": "reactnativedirect",
+      "cwd": "${workspaceFolder}",
+      "enableDebug": false,
+      "platform": "android"
+    },
+    {
       "name": "Run Android Hermes - Experimental",
       "request": "launch",
       "type": "reactnativedirect",
