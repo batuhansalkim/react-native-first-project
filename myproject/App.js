@@ -17,7 +17,13 @@ export default function App() {
       <View style={styles.container}>
 
         <FlatList
-        
+        numColumns={2}
+
+        keyExtractor={(item)=>item.id}
+        data={people}
+        renderItem={({item})=>(
+          <Text style={styles.item}>{item.name}</Text>
+        )}
       
         />
         
@@ -46,6 +52,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'orange',
     paddingTop:40,
     paddingHorizontal:20,
+    
   },
   // item:{
   //   marginTop:24,
@@ -60,6 +67,11 @@ const styles = StyleSheet.create({
     backgroundColor:"lightblue",
     marginHorizontal:10,
     marginTop:24,
+    width:150,
+    height:90,
+    alignItems:"center",
+    textAlign:"center",
+    justifyContent:"center",
   }
   
 });
