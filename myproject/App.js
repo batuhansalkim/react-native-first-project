@@ -1,28 +1,43 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native';
 
 export default function App() {
   const [people,setPeople] = useState([
-    { name : "batuhan", id: "1"},
-    { name: "tunahan", id: "2" },
-    { name: "necla", id: "3" },
-    { name: "mustafa", id: "4" },
-    { name: "fatih", id: "5" },
-    { name: "mami", id: "6" },
-    { name: "Beyza", id: "7" },
-    { name: "Kardelen", id: "8" },
+    { name : "ankara", id: "1"},
+    { name: "izmir", id: "2" },
+    { name: "bursa", id: "3" },
+    { name: "bilecik", id: "4" },
+    { name: "bolu", id: "5" },
+    { name: "van", id: "6" },
+    { name: "samsun", id: "7" },
+    { name: "konya", id: "8" },
   ]);
+
+  // const pressHandler = (id) => {
+  //   window.alert(id);
+  // }
+
+  const pressHandler = (id)=>{
+    setPeople((prevPeople)=> {
+      return prevPeople.filter(person=> person.id != id);
+    });
+  } 
 
   return (
       <View style={styles.container}>
 
         <FlatList
         numColumns={2}
-
         keyExtractor={(item)=>item.id}
         data={people}
         renderItem={({item})=>(
-          <Text style={styles.item}>{item.name}</Text>
+          // <TouchableOpacity onPress={()=> pressHandler(item.id)}>
+          //   <Text style={styles.item}>{item.name}</Text>
+          // </TouchableOpacity>
+          <TouchableOpacity onPress={()=> pressHandler(item.id)}>
+            <Text style={styles.item}>{item.name}</Text>
+          </TouchableOpacity>
+          
         )}
       
         />
@@ -54,12 +69,8 @@ const styles = StyleSheet.create({
     paddingHorizontal:20,
     
   },
-  // item:{
-  //   marginTop:24,
-  //   padding:30,
-  //   backgroundColor:"pink",
-  //   fontSize:24
-  // }
+  
+
   item:{
     marginTop:24,
     padding:30,
