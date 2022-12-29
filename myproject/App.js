@@ -3,35 +3,39 @@ import { StyleSheet, Text, View, FlatList } from 'react-native';
 
 export default function App() {
   const [people,setPeople] = useState([
-    { name : "batuhan", key: "1"},
-    { name: "tunahan", key: "2" },
-    { name: "necla", key: "3" },
-    { name: "mustafa", key: "4" },
-    { name: "fatih", key: "5" },
-    { name: "mami", key: "6" },
-    { name: "ömer", key: "7" },
-    { name: "yusuf", key: "8" },
+    { name : "batuhan", id: "1"},
+    { name: "tunahan", id: "2" },
+    { name: "necla", id: "3" },
+    { name: "mustafa", id: "4" },
+    { name: "fatih", id: "5" },
+    { name: "mami", id: "6" },
+    { name: "Beyza", id: "7" },
+    { name: "Kardelen", id: "8" },
   ]);
 
   return (
+      <View style={styles.container}>
 
-    <View style={styles.container}>
-      <FlatList
+        <FlatList
+        
       
-      />
-
+        />
+        
       {/*<ScrollView>
-
-        {
-          people.map(item=>(
+        {people.map(item => (
             <View key={item.key}>
               <Text style={styles.item}>{item.name}</Text>
             </View>
-          ))
-           }
-          </ScrollView>*/}
+          )
+        )
 
-    </View>
+        }
+        </ScrollView>*/}
+
+
+      </View>
+      
+    
   );
 }
 
@@ -43,11 +47,19 @@ const styles = StyleSheet.create({
     paddingTop:40,
     paddingHorizontal:20,
   },
+  // item:{
+  //   marginTop:24,
+  //   padding:30,
+  //   backgroundColor:"pink",
+  //   fontSize:24
+  // }
   item:{
     marginTop:24,
     padding:30,
-    backgroundColor:"pink",
-    fontSize:24
+    fontSize:24,
+    backgroundColor:"lightblue",
+    marginHorizontal:10,
+    marginTop:24,
   }
   
 });
