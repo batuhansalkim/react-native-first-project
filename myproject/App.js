@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FlatList, StyleSheet, Text, View,  } from 'react-native';
 import Header from "./components/header"
+import TodoItem from "./components/todoItem";
 
 export default function App() {
   const [todos, setTodos] = useState([
