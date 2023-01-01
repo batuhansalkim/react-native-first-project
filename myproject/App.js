@@ -5,14 +5,15 @@ import TodoItem from "./components/todoItem";
 
 export default function App() {
   const [todos, setTodos] = useState([
-    {text: "buy coffee", key:"1"},
-    {text: "create an app", key:"2"},
-    {text: "play on the switch", key:"3"},
+    {
+      text: "Almanya'da Almanlar yaşıyorsa, Sakarya'da sakarlar mı yaşar?", key:"1"},
+    { text: "File çorap aldım. -File niye aldın? Kendine alsaydın ya", key:"2"},
+    { text: "Küçük su birikintisine ne denir? -Sucuk", key:"3"},
   ]);
   
   const pressHandler = (key)=>{
     setTodos((prevTodos)=>{
-      return prevTodos.filter(todo => todo.key)
+      return prevTodos.filter(todo => todo.key != key);
     })
   }
 
