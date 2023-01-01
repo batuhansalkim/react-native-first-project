@@ -16,11 +16,11 @@ const styles = StyleSheet.create({
         padding:16,
         marginTop:16,
         borderColor:"#032f60",
-        backgroundColor:"#07c6aa",
+        backgroundColor:"orange",
         borderWidth:2,
         borderStyle:"solid",
         borderRadius:10,
-
+        color:"black",
     }
 })
 
