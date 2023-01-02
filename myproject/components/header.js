@@ -4,7 +4,8 @@ import {StyleSheet, Text, View, } from 'react-native';
 export default function Header(){
     return(
         <View style={styles.header}>
-            <Text style={styles.title}>Yapılacaklar Listem</Text>
+            <Text style={styles.title}>First Mobile App
+</Text>
         </View>
     )
 }
