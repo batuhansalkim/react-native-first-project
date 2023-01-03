@@ -10,6 +10,11 @@ export default function App() {
       text: "Almanya'da Almanlar yaşıyorsa, Sakarya'da sakarlar mı yaşar?", key:"1"},
     { text: "File çorap aldım. -File niye aldın? Kendine alsaydın ya", key:"2"},
     { text: "Küçük su birikintisine ne denir? -Sucuk", key:"3"},
+    { text: "deneme deneme", key:"4"},
+    { text: "deneme deneme2", key:"5"},
+    { text: "deneme deneme3", key:"6"},
+    { text: "deneme deneme3", key:"7"},
+    { text: "deneme deneme3", key:"8"},
   ]);
   
   const pressHandler = (key)=>{
