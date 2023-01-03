@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FlatList, StyleSheet, Text, View,  } from 'react-native';
+import { FlatList, StyleSheet, Text, View, Alert  } from 'react-native';
 import Header from "./components/header";
 import TodoItem from "./components/todoItem";
 import AddTodo from "./components/addTodo";
@@ -10,11 +10,8 @@ export default function App() {
       text: "Almanya'da Almanlar yaşıyorsa, Sakarya'da sakarlar mı yaşar?", key:"1"},
     { text: "File çorap aldım. -File niye aldın? Kendine alsaydın ya", key:"2"},
     { text: "Küçük su birikintisine ne denir? -Sucuk", key:"3"},
-    { text: "deneme deneme", key:"4"},
-    { text: "deneme deneme2", key:"5"},
-    { text: "deneme deneme3", key:"6"},
-    { text: "deneme deneme3", key:"7"},
-    { text: "deneme deneme3", key:"8"},
+    {text:"Deneme Sürümü ", key:"4"},
+    {text:"Deneme Sürümü2 ", key:"5"},
   ]);
   
   const pressHandler = (key)=>{
@@ -24,12 +21,20 @@ export default function App() {
   }
 
   const submitHandler = (text)=> {
-    setTodos((prevTodos)=> {
-      return[
-        {text: text, key:Math.random().toString},
-        ...prevTodos
-      ]
-    })
+
+    if (text.length > 3) {
+      setTodos((prevTodos) => {
+        return [
+          { text: text, key: Math.random().toString },
+          ...prevTodos
+        ]
+      });
+    }else{
+      Alert.alert("Az Kelime Hatası", "3 Kelimeden fazla yazmalısınız.",[{text:"Kapat"}],
+      { onPress: ()=> console.log("alert closed")});
+    }
+
+    
   }
 
   return (
