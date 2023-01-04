@@ -22,16 +22,22 @@ const styles = StyleSheet.create({
         color:"white",
         backgroundColor:"violet",
         padding:10,
-        
+
     },
     boxTwo: {
         color: "white",
+        color: "white",
+        backgroundColor: "violet",
     },
     boxThree: {
         color: "white",
+        color: "white",
+        backgroundColor: "violet",
     },
     boxFour: {
         color: "white",
+        color: "white",
+        backgroundColor: "violet",
     },
 });
 
