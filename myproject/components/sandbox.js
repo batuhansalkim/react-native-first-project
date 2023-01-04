@@ -20,6 +20,9 @@ const styles = StyleSheet.create({
     },
     boxOne:{
         color:"white",
+        backgroundColor:"violet",
+        padding:10,
+        
     },
     boxTwo: {
         color: "white",
