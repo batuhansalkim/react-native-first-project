@@ -11,8 +11,7 @@ export default function App() {
       text: "Almanya'da Almanlar yaşıyorsa, Sakarya'da sakarlar mı yaşar?", key:"1"},
     { text: "File çorap aldım. -File niye aldın? Kendine alsaydın ya", key:"2"},
     { text: "Küçük su birikintisine ne denir? -Sucuk", key:"3"},
-    {text:"Deneme Sürümü ", key:"4"},
-    {text:"Deneme Sürümü2 ", key:"5"},
+    
   ]);
   
   const pressHandler = (key)=>{
@@ -42,27 +41,27 @@ export default function App() {
 
   
   return (
-    <Sandbox/>
+    //<Sandbox/>
 
     
-    // <TouchableWithoutFeedback onPress={()=>{
-    //   Keyboard.dismiss();
-    // }}>
-    //   <View style={styles.container}>
-    //     <Header/>
-    //     <View style={styles.content}>
-    //       <AddTodo submitHandler={submitHandler}/>
-    //       <View style={styles.list}>
-    //       <FlatList
-    //       data={todos}
-    //       renderItem={({item}) => (
-    //         <TodoItem item={item} pressHandler={pressHandler}/>
-    //       )}
-    //       />
-    //       </View>
-    //     </View>
-    //   </View>
-    // </TouchableWithoutFeedback>
+    <TouchableWithoutFeedback onPress={()=>{
+      Keyboard.dismiss();
+    }}>
+      <View style={styles.container}>
+        <Header/>
+        <View style={styles.content}>
+          <AddTodo submitHandler={submitHandler}/>
+          <View style={styles.list}>
+          <FlatList
+          data={todos}
+          renderItem={({item}) => (
+            <TodoItem item={item} pressHandler={pressHandler}/>
+          )}
+          />
+          </View>
+        </View>
+      </View>
+    </TouchableWithoutFeedback>
     
   );
 }
@@ -78,8 +77,12 @@ const styles = StyleSheet.create({
   },
   content:{
     padding:40,
-    
-    
+    backgroundColor:"black",
+    flex:1,
   },
-  
+  list:{
+    flex:1,
+    marginTop:20,
+    backgroundColor:"yellow",
+  }
 })
