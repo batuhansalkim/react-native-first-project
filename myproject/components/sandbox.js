@@ -7,7 +7,7 @@ export default function Sandbox(){
             <Text style={styles.boxOne}>One</Text>
             <Text style={styles.boxTwo}>Two</Text>
             <Text style={styles.boxThree}>Three</Text>
-            <Text style={styles.boxFour}>Four</Text>
+            <Text style={styles.boxFour}>Batuhan</Text>
         </View>
     )
 }
@@ -15,29 +15,45 @@ export default function Sandbox(){
 const styles = StyleSheet.create({
     container:{
         flex:1,
+        flexDirection:"row",
         paddingTop:40,
         backgroundColor:"#394746",
+        alignContent:"center",
+        alignItems:"center",
+        justifyContent:"center",
+       
     },
     boxOne:{
         color:"white",
         backgroundColor:"violet",
         padding:10,
+        width:50,
+        height:40,
+        margin:10,
 
     },
     boxTwo: {
         color: "white",
         color: "white",
-        backgroundColor: "violet",
+        backgroundColor: "gold",
+        width: 50,
+        height: 40,
+        margin:10,
     },
     boxThree: {
         color: "white",
         color: "white",
-        backgroundColor: "violet",
+        backgroundColor: "coral",
+        width: 50,
+        height: 40,
+        margin:10,
     },
     boxFour: {
         color: "white",
         color: "white",
-        backgroundColor: "violet",
+        backgroundColor: "skyblue",
+        width: 50,
+        height: 40,
     },
 });
 
