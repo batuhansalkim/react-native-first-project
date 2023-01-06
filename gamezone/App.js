@@ -16,9 +16,10 @@ export default function App() {
 
   if(fontsLoaded){
     return (
-    <Home/>
-  );
-  }else{
+      <Home/>
+    );
+  }
+  else{
     return(
       <AppLoading
       startAsync={getFonts}
