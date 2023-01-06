@@ -22,7 +22,7 @@ export default function App() {
     return(
       <AppLoading
       startAsync={getFonts}
-      onFinish={()=> setFont}
+      onFinish={()=> setFontsLoaded(true)}
     />
     )
     
