@@ -9,8 +9,6 @@ export default function TodoItem({ item, pressHandler }){
                 <MaterialIcons name="delete" size={18} color="#333"/>
                 <Text style={styles.itemText}>{item.text}</Text>
             </View>
-
-            
         </TouchableOpacity>
 
     )
