@@ -4,8 +4,8 @@ import { StyleSheet,View,Text } from "react-native";
 
 export default function About(){
     return(
-        <View style = {styles.container}>
-            <Text></Text>
+        <View style={styles.container}>
+            <Text>Screen About</Text>
         </View>
     )
 }
@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
         padding:24,
     }
 })
-
 
 
 
