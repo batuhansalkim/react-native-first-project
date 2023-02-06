@@ -1,45 +1,39 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, Text, View, TextInput } from "react-native";
 
-export default function App() {
-  const [name, setName] = useState("batuhan");
+export default function App(){
+  const [name,setName] = useState("Name test ");
+  const [age, setAge] = useState("Age test");
+
+  return(
+    <View style={styles.container}>
+      <Text>Enter name : </Text>
+      <TextInput style={styles.input} placeholder="e.g. batu slkm"/>
+
+      <Text>name: {name}, age: {age}</Text>
+    </View>
+  );
 }
-return (
-  <View style={styles.container}>
-    <Text>My name is {name}</Text>
-  </View>
-)
-// export default function App() {
-//   const [name, setName] = useState("shaun");
-//   const [person, setPerson] = useState({name: "mario", age:40});
 
-//   const clickHandler = () => {
-//     setName("batuhan");
-//     setPerson({name: "degisti", age: 22})
-//   }
 
-//   return (
-//     <View style={styles.container}>
-//       <Text>My name is {name}</Text>
-//       <Text>His name is {person.name} and his age is {person.age}</Text>
-//       <View style={styles.buttonContainer}>
-//         <Button title="isim degistir" onPress={clickHandler } />
-//       </View>
-//     </View>
-//   )
-// }
+const styles = StyleSheet.create({
+  container:{
+    flex:1,
+    backgroundColor:"#fff",
+    alignItems:"center",
+    justifyContent:"center",
+  },
+  input:{
+    borderWidth:1,
+    borderColor:"#777",
+    padding:8,
+    margin:10,
+    width:200,
+  }
+})
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: "#fff",
-//     alignItems: "center",
-//     justifyContent: "center",
-//   },
-//   buttonContainer: {
-//     marginTop: 20,
-//   }
-// })
+
+
 
 
 
