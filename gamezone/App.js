@@ -2,47 +2,65 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View, TextInput } from "react-native";
 
 export default function App(){
-  const [name,setName] = useState("Name test ");
-  const [age, setAge] = useState("Age test");
-
-  return(
-    <View style={styles.container}>
-      <Text>Enter name : </Text>
-      <TextInput 
-        multiline
-        keyboardType="numeric"
-        style={styles.input} 
-        placeholder="e.g. batu slkm"
-        onChange={(val)=>setName(val)}
-      />
-      <Text>Enter age : </Text>
-      <TextInput 
-        style={styles.input}
-        placeholder="e.g. age "
-        onChange={(val)=> setAge(val)}
-      />
-
-      <Text>name: {name}, age: {age}</Text>
-    </View>
-  );
+  const [people, setPeople] = useState([
+    {name:"shaun", key:"1"},
+    {name:"polai", key:"2"},
+    {name:"dolur", key:"3"},
+    {name:"forex", key:"4"},
+    {name:"luigi", key:"5"},
+    {name:"peach", key:"6"},
+    {name:"toad", key:"7"},
+    {name:"bowser", key:"8"},
+  ])
 }
 
 
-const styles = StyleSheet.create({
-  container:{
-    flex:1,
-    backgroundColor:"#fff",
-    alignItems:"center",
-    justifyContent:"center",
-  },
-  input:{
-    borderWidth:1,
-    borderColor:"#777",
-    padding:8,
-    margin:10,
-    width:200,
-  }
-})
+
+
+
+
+// export default function App(){
+//   const [name,setName] = useState("Name test ");
+//   const [age, setAge] = useState("Age test");
+
+//   return(
+//     <View style={styles.container}>
+//       <Text>Enter name : </Text>
+//       <TextInput 
+//         multiline
+//         keyboardType="numeric"
+//         style={styles.input} 
+//         placeholder="e.g. batu slkm"
+//         onChange={(val)=>setName(val)}
+//       />
+//       <Text>Enter age : </Text>
+//       <TextInput 
+//         style={styles.input}
+//         placeholder="e.g. age "
+//         onChange={(val)=> setAge(val)}
+//       />
+
+//       <Text>name: {name}, age: {age}</Text>
+//     </View>
+//   );
+// }
+
+
+// const styles = StyleSheet.create({
+//   container:{
+//     flex:1,
+//     backgroundColor:"#fff",
+//     alignItems:"center",
+//     justifyContent:"center",
+//   },
+//   input:{
+//     borderWidth:1,
+//     borderColor:"#777",
+//     padding:8,
+//     margin:10,
+//     width:200,
+//   }
+// })
 
 
 
