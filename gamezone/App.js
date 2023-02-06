@@ -11,9 +11,32 @@ export default function App(){
     {name:"peach", key:"6"},
     {name:"toad", key:"7"},
     {name:"bowser", key:"8"},
-  ])
+  ]);
+
+  return(
+    <View style={styles.container}>
+      
+      {people.map((item)=>{
+        return(
+          <View key={item.key}>
+            <Text>{item.name}</Text>
+          </View>
+        )
+      })}
+    </View>
+  );
 }
 
+const styles = StyleSheet.create({
+  container:{
+    flex:1,
+    backgroundColor:"#fff",
+    paddingTop:40,
+    paddingHorizontal:20,
+    alignItems:"center",
+    justifyContent:"center"
+  }
+})
 
 
 
