@@ -1,22 +1,22 @@
 import React, { useState } from "react";
-import {  StyleSheet, Text } from "react-native";
+import {  StyleSheet, Text,View } from "react-native";
 
 
 export default function App() {
   return(
-    <Text style={styles.title}>Hello</Text>
+    <View style={styles.container}>
+      <Text>open up App. js to start working on your app!</Text>
+    </View>
   )
   
 }
 
 const styles = StyleSheet.create({
-  title:{
-    fontSize:20,
-    color:"white",
-    backgroundColor:"black",
-    textAlign:"center",
+  container:{
+    flex:1,
+    backgroundColor:"#fff",
+    alignItems:"center",
     justifyContent:"center",
-    paddingTop:40,
   }
 })
 
