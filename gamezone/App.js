@@ -8,7 +8,19 @@ export default function App(){
   return(
     <View style={styles.container}>
       <Text>Enter name : </Text>
-      <TextInput style={styles.input} placeholder="e.g. batu slkm"/>
+      <TextInput 
+        multiline
+        keyboardType="numeric"
+        style={styles.input} 
+        placeholder="e.g. batu slkm"
+        onChange={(val)=>setName(val)}
+      />
+      <Text>Enter age : </Text>
+      <TextInput 
+        style={styles.input}
+        placeholder="e.g. age "
+        onChange={(val)=> setAge(val)}
+      />
 
       <Text>name: {name}, age: {age}</Text>
     </View>
