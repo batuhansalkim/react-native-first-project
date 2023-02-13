@@ -8,7 +8,7 @@ export default function App(){
 
     </View>
   );
-}
+}2
 
 const styles = StyleSheet.create({
   container:{
