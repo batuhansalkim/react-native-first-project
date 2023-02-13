@@ -13,12 +13,12 @@ export default function App() {
       <View style={styles.content}>
         {/*to form */}
         <View style={styles.list}>
-          <FlatList>
+          <FlatList
             data={todos}
             renderItem={({ item }) => (
               <Text>{item.text}</Text>
             )}
-          </FlatList>
+          />
         </View>
       </View>
     </View>
